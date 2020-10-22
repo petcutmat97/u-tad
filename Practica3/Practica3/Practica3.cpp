@@ -4,29 +4,42 @@
 #include <iostream>
 #include <stdarg.h>
 
-int AddInts(int _iNumArgs, ...)
+const char* tablaCadenas[] =
 {
-  va_list ParamList;
-  va_start(ParamList, _iNumArgs);
+  "cadena0",
+  "cadena1",
+  "cadena2"
+};
 
-  int iTotal = 0;
-  for (int i = 0; i < _iNumArgs; ++i)
-  {
-    int iValue = va_arg(ParamList, int);
-    iTotal += iValue;
-
-    printf("Sumando %d (Total=%d)\n", iValue, iTotal);
+void GetString(int _index, const char* _tabla[]) {
+  if (_index < sizeof(_tabla)) {
+    printf("La cadena numero %d es: %s\n", _index, _tabla[_index]);
   }
-  va_end(ParamList);
+  else {
+    printf("Indice incorrecto");
+  }
+  
+}
 
-  return iTotal;
+void GetInvertedString(int _index, const char* _tabla[]) {
+  if (_index < sizeof(_tabla)) {
+    const char* inverse[sizeof(_tabla)];
+    for (unsigned int uInt = 0; uInt < sizeof(_tabla); uInt++) {
+      inverse[uInt] = _tabla[sizeof(_tabla) - uInt];
+      printf("%c\n", inverse[uInt]);
+      
+    }
+    printf("La cadena numero %d invertida es: %s", _index, inverse);
+  }
+  else {
+    printf("Indice incorrecto");
+  }
 }
 
 int main()
 {
-  int iTotal = AddInts(1, 5, 7, 3, 21, 86);
-  printf("Total = %d\n", iTotal);
-  printf("\n");
+  GetString(1, tablaCadenas);
+  GetInvertedString(1, tablaCadenas);
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

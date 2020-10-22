@@ -1,0 +1,3 @@
+﻿  Practica3.cpp
+C:\Users\peter.cutino\source\repos\petcutmat97\u-tad\Practica3\Practica3\Practica3.cpp(32,12): warning C4477:  'printf' : format string '%s' requires an argument of type 'char *', but variadic argument 2 has type 'const char **'
+  Practica3.vcxproj -> C:\Users\peter.cutino\Source\Repos\petcutmat97\u-tad\Practica3\Debug\Practica3.exe

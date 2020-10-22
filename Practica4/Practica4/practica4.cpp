@@ -28,10 +28,29 @@ void drawA(TEntity* entity)
   gotoxy(entity->m_ix, entity->m_iy);
   printf("A");
 }
-
-void moveA(TEntity* entity)
+void drawB(TEntity* entity)
 {
   gotoxy(entity->m_ix, entity->m_iy);
+  printf("B");
+}
+void drawC(TEntity* entity)
+{
+  gotoxy(entity->m_ix, entity->m_iy);
+  printf("C");
+}
+void drawD(TEntity* entity)
+{
+  gotoxy(entity->m_ix, entity->m_iy);
+  printf("D");
+}
+
+void moveRight(TEntity* entity)
+{
+  entity->m_ix++;
+}
+void moveRight(TEntity* entity)
+{
+  entity->m_ix++;
 }
 
 void checkMoveLimits(TEntity* entity)
@@ -49,6 +68,8 @@ void checkMoveLimits(TEntity* entity)
 unsigned int uKey;
 int main(int argc, char* argv[])
 {
+
+  funcEntity tEntities[];
 
   //Entity 1
   funcEntity tFuncs1[2] = { &drawA, &moveRight };
