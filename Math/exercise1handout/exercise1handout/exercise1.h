@@ -7,6 +7,7 @@
 #include "maths_funcs.h"
 #include "camera.h"
 #include "lineshapes.h"
+#include <iostream>
 
 struct Exercise1 {
 
@@ -80,7 +81,7 @@ struct Exercise1 {
 		cubeMatrix = identity_mat4();
 		cubePosition = vec3(0, 0, 0);
 
-		Shapes::addArrow(referenceFrameLines, vec3(0, 0, 0), vec3(1, 0, 0), vec3(1, 0, 0));
+		Shapes::addArrow(referenceFrameLines, vec3(0, 0, 0), vec3(1, 0, 0), vec3(1, 0, 0)); //from to color
 		Shapes::addArrow(referenceFrameLines, vec3(0, 0, 0), vec3(0, 1, 0), vec3(0, 1, 0));
 		Shapes::addArrow(referenceFrameLines, vec3(0, 0, 0), vec3(0, 0, 1), vec3(0, 0, 1));
 
@@ -127,17 +128,9 @@ struct Exercise1 {
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		glViewport(0, 0, g_gl_width, g_gl_height);
 
-    if (glfwGetKey(window, GLFW_KEY_DOWN)) {
-      cameraPosition.y -= 1*elapsed_seconds; //muevo la camara hacia abajo en el eje y al pulsar la tecla DOWN 
-    }
-
-    if (glfwGetKey(window, GLFW_KEY_D)) {
-      cubePosition.x += 1 * elapsed_seconds; //muevo elcubi hacia la derecha en el eje x al pulsar la tecla D
-    }
-
-    if (glfwGetKey(window, GLFW_KEY_R)) {
-      cubeMatrix = rotate_z_deg(identity_mat4(), 20*elapsed_seconds);
-    }
+		if (glfwGetKey(window, GLFW_KEY_DOWN)) {
+			cameraPosition.y -= 1*elapsed_seconds; //muevo la camara hacia abajo en el eje y al pulsar la tecla DOWN 
+		}
 
 		glfwPollEvents();
 		if (GLFW_PRESS == glfwGetKey(window, GLFW_KEY_ESCAPE)) {
@@ -148,7 +141,29 @@ struct Exercise1 {
 		cameraMatrix = translate(identity_mat4(), cameraPosition*-1.f); //Se multiplica por -1.f para invertir todos los valores y asi evitar ver el cubo como si fuera un espejo
 
 		// TODO: change following line to translate and rotate cube
-		cubeMatrix = translate(identity_mat4(), cubePosition);
+		if (glfwGetKey(window, GLFW_KEY_D)) {
+			 //muevo el cubo hacia la derecha en el eje x al pulsar la tecla D
+			vec3 cubePosition2 = vec3(cubePosition.x+=1*elapsed_seconds, cubePosition.y, cubePosition.z);
+			cubeMatrix = translate(identity_mat4(), cubePosition2);
+			
+			float degrees = 20;
+
+			print(cubeMatrix.getRotation());
+			
+			cubeMatrix = rotate_z_deg(identity_mat4(), degrees);
+
+			print(cubeMatrix.getRotation());
+			printf("%f\n", acosf(cubeMatrix.getRotation().m[0]));
+			int deg = acosf(cubeMatrix.getRotation().m[0]) * ONE_RAD_IN_DEG;
+			printf("%f\n", deg );
+		}
+		//cubeMatrix = translate(identity_mat4(), cubePosition);
+
+		if (glfwGetKey(window, GLFW_KEY_A)) {
+			//muevo el cubo hacia la derecha en el eje x al pulsar la tecla D
+			vec3 cubePosition2 = vec3(cubePosition.x -= 1 * elapsed_seconds, cubePosition.y, cubePosition.z);
+			cubeMatrix = translate(identity_mat4(), cubePosition2);
+		}
 
 		glUseProgram(lines_shader_index);
 

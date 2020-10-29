@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Math",
+    "\\Math\\exercise1handout",
+    "\\Math\\exercise1handout\\exercise1handout"
   ],
-  "SelectedNode": "\\Math",
+  "SelectedNode": "\\Math\\exercise1handout\\exercise1handout\\exercise1.h",
   "PreviewInSolutionExplorer": false
 }
