@@ -94,12 +94,18 @@ void Shapes::addArrow(Lines & lines, const vec3 & from, const vec3 & to, const v
 	// add your new positions to arrow_vertices, then the corresponding arrow_colors
 	// finally draw lines with indices arrow_indices
 
+	vec3 c = cross(to - from, vec3(0, 1, 0));
+	vec3 clen = normalise(c) * 10;
+	const vec3 & point = clen;
+
 	vec3 arrow_vertices[] = {
 		from,
 		to,
+		point,
 	};
 	
 	vec3 arrow_colors[] = {
+		color,
 		color,
 		color,
 	};
@@ -107,6 +113,8 @@ void Shapes::addArrow(Lines & lines, const vec3 & from, const vec3 & to, const v
 	unsigned int arrow_indices[] = {
 		0,1, // draw line from arrow_vertices[0] to arrow_vertices[1]
 	};
+
+	
 
 	lines.add(&arrow_vertices[0].v[0], &arrow_colors[0].v[0], 2, &arrow_indices[0], 2);
 }
