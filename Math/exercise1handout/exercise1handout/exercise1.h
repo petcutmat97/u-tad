@@ -145,22 +145,18 @@ struct Exercise1 {
 
 		// TODO: change following line to translate and rotate cube
 		if (glfwGetKey(window, GLFW_KEY_D)) {
-			 //muevo el cubo hacia la derecha en el eje x al pulsar la tecla D
-			vec3 cubePosition2 = vec3(cubePosition.x+=1*elapsed_seconds, cubePosition.y, cubePosition.z);
-			cubeMatrix = translate(identity_mat4(), cubePosition2);
+		  //muevo el cubo hacia la derecha en el eje x al pulsar la tecla D
 
-			printf("%d\n",cubeDegree);
-			cubeMatrix = rotate_z_deg(identity_mat4(), -(cubeDegree +90*elapsed_seconds));
+			cubePosition.x += elapsed_seconds*3;
 
-			cubeDegree = acosf(cubeMatrix.getRotation().m[0]) * ONE_RAD_IN_DEG;
+      mat4 cubemat = rotate_z_deg(identity_mat4(), -0.00001f);
+
+      cubeMatrix = translate(cubeMatrix, cubePosition);
+      cubeMatrix = cubemat * cubeMatrix;
+
+      print(cubeMatrix);
 		}
 		//cubeMatrix = translate(identity_mat4(), cubePosition);
-
-		if (glfwGetKey(window, GLFW_KEY_A)) {
-			//muevo el cubo hacia la derecha en el eje x al pulsar la tecla D
-			vec3 cubePosition2 = vec3(cubePosition.x -= 1 * elapsed_seconds, cubePosition.y, cubePosition.z);
-			cubeMatrix = translate(identity_mat4(), cubePosition2);
-		}
 
 		glUseProgram(lines_shader_index);
 

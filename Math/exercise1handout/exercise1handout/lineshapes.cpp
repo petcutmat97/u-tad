@@ -94,29 +94,40 @@ void Shapes::addArrow(Lines & lines, const vec3 & from, const vec3 & to, const v
 	// add your new positions to arrow_vertices, then the corresponding arrow_colors
 	// finally draw lines with indices arrow_indices
 
-	vec3 c = cross(to - from, vec3(0, 1, 0));
-	vec3 clen = normalise(c) * 10;
-	const vec3 & point = clen;
+  vec3 a = to - from;
+	vec3 perpend1 = cross(vec3(0, 1, 0),a);
+  vec3 perpend2 = cross(a, perpend1);
+	vec3 alen = normalise(a) * 0.9;
+	vec3 p1 = alen + from + perpend1;
+  vec3 p2 = alen + from - perpend2;
 
 	vec3 arrow_vertices[] = {
 		from,
 		to,
-		point,
+		p1,
+    p2,
 	};
 	
 	vec3 arrow_colors[] = {
 		color,
 		color,
 		color,
+    color,
 	};
 
 	unsigned int arrow_indices[] = {
 		0,1, // draw line from arrow_vertices[0] to arrow_vertices[1]
+    1,2,
+    1,3,
 	};
 
 	
 
-	lines.add(&arrow_vertices[0].v[0], &arrow_colors[0].v[0], 2, &arrow_indices[0], 2);
+	lines.add(&arrow_vertices[0].v[0], &arrow_colors[0].v[0], 2, &arrow_indices[0], 2); //linea original
+
+  lines.add(&arrow_vertices[1].v[2], &arrow_colors[0].v[0], 2, &arrow_indices[1], 2);
+
+  lines.add(&arrow_vertices[2].v[2], &arrow_colors[0].v[0], 2, &arrow_indices[2], 2);
 }
 
 void Shapes::addGrid(Lines& lines, const vec3& from, const vec3& to, const vec3& color, int divs) {

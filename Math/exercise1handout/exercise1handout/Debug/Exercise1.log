@@ -1,6 +1,3 @@
-﻿  exercise1.cpp
-  main.cpp
-C:\Users\peter.cutino\source\repos\petcutmat97\u-tad\Math\exercise1handout\exercise1handout\Exercise1.h(152,11): warning C4477:  'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'double'
-  Generating Code...
-C:\Users\peter.cutino\source\repos\petcutmat97\u-tad\Math\exercise1handout\exercise1handout\exercise1.h(152,11): warning C4477:  'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'double'
+﻿  lineshapes.cpp
+C:\Users\peter.cutino\source\repos\petcutmat97\u-tad\Math\exercise1handout\exercise1handout\lineshapes.cpp(100,32): warning C4305:  'argument': truncation from 'double' to 'float'
   Exercise1.vcxproj -> C:\Users\peter.cutino\Source\Repos\petcutmat97\u-tad\Math\exercise1handout\exercise1handout\Debug\Exercise1.exe
