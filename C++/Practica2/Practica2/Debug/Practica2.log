@@ -1,0 +1,4 @@
+﻿  Practica2.cpp
+C:\Users\peter.cutino\source\repos\petcutmat97\u-tad\C++\Practica2\Practica2\Practica2.cpp(18,29): warning C4838:  conversion from 'unsigned int' to 'int' requires a narrowing conversion
+C:\Users\peter.cutino\source\repos\petcutmat97\u-tad\C++\Practica2\Practica2\Practica2.cpp(38,14): warning C4477:  'printf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'int'
+  Practica2.vcxproj -> C:\Users\peter.cutino\Source\Repos\petcutmat97\u-tad\C++\Practica2\Debug\Practica2.exe

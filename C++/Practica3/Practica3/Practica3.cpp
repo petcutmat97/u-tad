@@ -18,28 +18,29 @@ void GetString(int _index, const char* _tabla[]) {
   else {
     printf("Indice incorrecto");
   }
-  
 }
 
 void GetInvertedString(int _index, const char* _tabla[]) {
   if (_index < sizeof(_tabla)) {
-    const char* inverse[sizeof(_tabla)];
-    for (unsigned int uInt = 0; uInt < sizeof(_tabla); uInt++) {
-      inverse[uInt] = _tabla[sizeof(_tabla) - uInt];
-      printf("%c\n", inverse[uInt]);
-      
+    const unsigned int UTam = 7;
+    char* inverse = new char[UTam+1];
+    const char* cadena = _tabla[_index];
+    
+    for (unsigned int uInt = 0; uInt < UTam+1; uInt++) {
+      inverse[uInt] = cadena[UTam - uInt-1];
     }
-    printf("La cadena numero %d invertida es: %s", _index, inverse);
+    printf("\nLa cadena numero %d invertida es: %s\n",_index, inverse);
   }
   else {
     printf("Indice incorrecto");
   }
+  printf("\n\n\n\n");
 }
 
 int main()
 {
   GetString(1, tablaCadenas);
-  GetInvertedString(1, tablaCadenas);
+  GetInvertedString(2, tablaCadenas);
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

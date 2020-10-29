@@ -28,25 +28,29 @@ int main()
   }
 
   //ver lo de 4 en 4 de char (transparencia) y comparar bytes
-  /*int* pIntTabla = tabla;
+  int* pIntTabla2 = tabla;
   unsigned char cBiggest(0);
   for (unsigned int uInt = 0; uInt < sizeof(tabla) / sizeof(int); uInt++) {
-    if (static_cast<char>(*(pIntTabla + uInt)) > cBiggest)
-      cBiggest = static_cast<char>(*(pIntTabla + uInt));
-    if (uInt == sizeof(tabla) / sizeof(int) - 1)
+    int iValue = static_cast<int>(*(pIntTabla + uInt));
+    char* pChar = reinterpret_cast<char*>(&iValue);
+    printf("\n%d\n", iValue);
+    for (unsigned int uInt = 0; uInt < sizeof(iValue); uInt++) {
+      printf("%02hhX", *(pChar + uInt));
+    }
+    /*if (uInt == sizeof(tabla) / sizeof(int) - 1)
     {
       printf("\nEl byte mas alto de la lista es: %d\n", cBiggest);
-    }
-  }*/
+    }*/
+  }
 
   char cadena[] = "Hola";
-  char aux_cadena[] = "";
+  const unsigned int uTam = 4; //mirar strlen
+  char aux_cadena[uTam+1] = "";
 
-  for (unsigned int uInt = 0; uInt < sizeof(cadena); uInt++) {
-    aux_cadena[uInt] += cadena[uInt];
+  for (unsigned int uInt = 0; uInt < uTam; uInt++) {
+    aux_cadena[uInt] = cadena[uTam - uInt -1];
   }
-  printf("%s", aux_cadena); //OK
-
+  printf("\nLa cadena %s inversa es: %s", cadena, aux_cadena); 
 
   printf("\n\n\n\n\n");
 }
