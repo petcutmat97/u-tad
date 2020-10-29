@@ -1,8 +1,6 @@
 ﻿  exercise1.cpp
-C:\Users\peter\source\repos\u-tad\Math\exercise1handout\exercise1handout\Exercise1.h(157,12): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\peter\source\repos\u-tad\Math\exercise1handout\exercise1handout\Exercise1.h(158,11): warning C4477: 'printf' : la cadena de formato '%f' requiere un argumento de tipo 'double', pero el argumento variádico 1 tiene el tipo 'int'
   main.cpp
-C:\Users\peter\source\repos\u-tad\Math\exercise1handout\exercise1handout\exercise1.h(157,12): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\peter\source\repos\u-tad\Math\exercise1handout\exercise1handout\exercise1.h(158,11): warning C4477: 'printf' : la cadena de formato '%f' requiere un argumento de tipo 'double', pero el argumento variádico 1 tiene el tipo 'int'
-  Generando código...
-  Exercise1.vcxproj -> C:\Users\peter\Source\Repos\u-tad\Math\exercise1handout\exercise1handout\Debug\Exercise1.exe
+C:\Users\peter.cutino\source\repos\petcutmat97\u-tad\Math\exercise1handout\exercise1handout\Exercise1.h(152,11): warning C4477:  'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'double'
+  Generating Code...
+C:\Users\peter.cutino\source\repos\petcutmat97\u-tad\Math\exercise1handout\exercise1handout\exercise1.h(152,11): warning C4477:  'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'double'
+  Exercise1.vcxproj -> C:\Users\peter.cutino\Source\Repos\petcutmat97\u-tad\Math\exercise1handout\exercise1handout\Debug\Exercise1.exe

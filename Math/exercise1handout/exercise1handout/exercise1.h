@@ -23,6 +23,7 @@ struct Exercise1 {
 	Lines cubeLines;
 	mat4 cubeMatrix;
 	vec3 cubePosition;
+  float cubeDegree;
 
 	Lines referenceFrameLines;
 	mat4 referenceFrameMatrix;
@@ -34,6 +35,8 @@ struct Exercise1 {
 		startGlContext(&window, width, height);
 
 		lines_shader_index = create_programme_from_files("lines_vs.glsl", "lines_fs.glsl");
+
+    cubeDegree = 0;
 
 		vec3 whiteColor = vec3(1.0f, 1.0f, 1.0f);
 
@@ -145,17 +148,11 @@ struct Exercise1 {
 			 //muevo el cubo hacia la derecha en el eje x al pulsar la tecla D
 			vec3 cubePosition2 = vec3(cubePosition.x+=1*elapsed_seconds, cubePosition.y, cubePosition.z);
 			cubeMatrix = translate(identity_mat4(), cubePosition2);
-			
-			float degrees = 20;
 
-			print(cubeMatrix.getRotation());
-			
-			cubeMatrix = rotate_z_deg(identity_mat4(), degrees);
+			printf("%d\n",cubeDegree);
+			cubeMatrix = rotate_z_deg(identity_mat4(), -(cubeDegree +90*elapsed_seconds));
 
-			print(cubeMatrix.getRotation());
-			printf("%f\n", acosf(cubeMatrix.getRotation().m[0]));
-			int deg = acosf(cubeMatrix.getRotation().m[0]) * ONE_RAD_IN_DEG;
-			printf("%f\n", deg );
+			cubeDegree = acosf(cubeMatrix.getRotation().m[0]) * ONE_RAD_IN_DEG;
 		}
 		//cubeMatrix = translate(identity_mat4(), cubePosition);
 
