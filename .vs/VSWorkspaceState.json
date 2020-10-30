@@ -4,8 +4,11 @@
     "\\C++",
     "\\Math",
     "\\Math\\exercise1handout",
-    "\\Math\\exercise1handout\\exercise1handout"
+    "\\Math\\exercise1handout\\exercise1handout",
+    "\\Math\\exercise1handout\\exercise1handout\\out",
+    "\\Math\\exercise1handout\\exercise1handout\\Release",
+    "\\Math\\exercise1handout\\exercise2handout"
   ],
-  "SelectedNode": "\\Math\\exercise1handout\\exercise1handout\\lineshapes.cpp",
+  "SelectedNode": "\\Math",
   "PreviewInSolutionExplorer": false
 }
