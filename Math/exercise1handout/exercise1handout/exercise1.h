@@ -23,7 +23,8 @@ struct Exercise1 {
 	Lines cubeLines;
 	mat4 cubeMatrix;
 	vec3 cubePosition;
-  float cubeDegree;
+
+	float cubeRotation;
 
 	Lines referenceFrameLines;
 	mat4 referenceFrameMatrix;
@@ -35,8 +36,7 @@ struct Exercise1 {
 		startGlContext(&window, width, height);
 
 		lines_shader_index = create_programme_from_files("lines_vs.glsl", "lines_fs.glsl");
-
-    cubeDegree = 0;
+		
 
 		vec3 whiteColor = vec3(1.0f, 1.0f, 1.0f);
 
@@ -105,9 +105,9 @@ struct Exercise1 {
 
 		cameraMatrix = identity_mat4();
 		//cameraPosition = vec3(0, 0, 7);
-    cameraPosition = vec3(-0.5, -0.5, 7); //Mover la cámara 0.5 unidades a la izquierda (primer valor = eje negativo x) y 0.5 hacia abajo (segundo valor = eje negativo x)
-    //cameraPosition = vec3(2, 2, 7); //Mover la cámara 2 unidades a la derecha (primer valor = eje positivo x) y 2 hacia arriba (segundo valor = eje positivo y)
-    //tambien podemos alejar o acercar la cámara en el eje z con el tercer valor
+		cameraPosition = vec3(-0.5, -0.5, 7); //Mover la cámara 0.5 unidades a la izquierda (primer valor = eje negativo x) y 0.5 hacia abajo (segundo valor = eje negativo x)
+		//cameraPosition = vec3(2, 2, 7); //Mover la cámara 2 unidades a la derecha (primer valor = eje positivo x) y 2 hacia arriba (segundo valor = eje positivo y)
+		//tambien podemos alejar o acercar la cámara en el eje z con el tercer valor
 
 		// tell GL to only draw onto a pixel if the shape is closer to the viewer
 		glEnable(GL_DEPTH_TEST); // enable depth-testing
@@ -147,14 +147,14 @@ struct Exercise1 {
 		if (glfwGetKey(window, GLFW_KEY_D)) {
 		  //muevo el cubo hacia la derecha en el eje x al pulsar la tecla D
 
+			cubeRotation -= 5.f;
 			cubePosition.x += elapsed_seconds*3;
 
-      mat4 cubemat = rotate_z_deg(identity_mat4(), -0.00001f);
+			mat4 matT = translate(identity_mat4(), cubePosition);
+			mat4 matR = rotate_z_deg(identity_mat4(), cubeRotation);
 
-      cubeMatrix = translate(cubeMatrix, cubePosition);
-      cubeMatrix = cubemat * cubeMatrix;
+			cubeMatrix = matT * matR;
 
-      print(cubeMatrix);
 		}
 		//cubeMatrix = translate(identity_mat4(), cubePosition);
 
