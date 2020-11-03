@@ -148,7 +148,7 @@ struct Exercise1 {
 		  //muevo el cubo hacia la derecha en el eje x al pulsar la tecla D
 
 			cubeRotation -= 5.f;
-			cubePosition.x += elapsed_seconds*3;
+			cubePosition.x += elapsed_seconds*2;
 
 			mat4 matT = translate(identity_mat4(), cubePosition);
 			mat4 matR = rotate_z_deg(identity_mat4(), cubeRotation);

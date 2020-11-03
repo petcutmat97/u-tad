@@ -208,6 +208,16 @@ struct Exercise2 {
 
 		meshGroupNode.rotation = quat_from_axis_deg(meshYaw += elapsed_seconds * 10, 0, 1, 0);
 
+    if (glfwGetKey(window, GLFW_KEY_UP)) {
+      cameraPosition.z -= 1 * elapsed_seconds;
+      cameraMatrix = translate(identity_mat4(), cameraPosition * -1.f);
+    }
+
+    if (glfwGetKey(window, GLFW_KEY_DOWN)) {
+      cameraPosition.z += 1 * elapsed_seconds;
+      cameraMatrix = translate(identity_mat4(), cameraPosition * -1.f);
+    }
+
 		// whole scene hierarchy is updated here from root downwards
 		sceneRoot.updateHierarchy();
 
