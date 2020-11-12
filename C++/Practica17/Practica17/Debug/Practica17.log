@@ -1,0 +1,4 @@
+﻿  Practica17.cpp
+C:\Users\peter.cutino\source\repos\petcutmat97\u-tad\Practica17\Practica17\Practica17.cpp(34): warning C4715:  'EMiEnum::AsStr': not all control paths return a value
+C:\Users\peter.cutino\source\repos\petcutmat97\u-tad\Practica17\Practica17\Practica17.cpp(52): warning C4715:  'EMiEnum::AsEnum': not all control paths return a value
+  Practica17.vcxproj -> C:\Users\peter.cutino\source\repos\petcutmat97\u-tad\Practica17\Debug\Practica17.exe
