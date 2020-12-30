@@ -1,0 +1,12 @@
+{
+  "version": "0.2.1",
+  "defaults": {},
+  "configurations": [
+    {
+      "type": "default",
+      "project": "C++\\Practicas\\Practicas\\Practica3\\Practica3\\Practica3.cpp",
+      "projectTarget": "",
+      "name": "Practica3.cpp"
+    }
+  ]
+}

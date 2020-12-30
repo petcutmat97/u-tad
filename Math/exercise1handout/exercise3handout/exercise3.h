@@ -40,14 +40,33 @@ struct Exercise3 {
 
 	// exercise 3 spaces
 	// getRay direction from mouse coords
-	//  see shaders for hints
+	// see shaders for hints
 	// get world mouse position
 	// ray sphere intersection for selection 
+
 
 	
 	static vec3 getWorldMousePosition(float mouse_x, float mouse_y, float windowsWidth, float windowsHeight, const mat4& projMat, const mat4& viewMat) {
 
-		return vec3(0, 0, 0);
+		//1.1
+		float mouseXCord = (2.f * mouse_x) / windowsWidth; //coordenadas ratón a coordenadas cubo
+		float mouseYCord = (2.f * mouse_y) / windowsHeight; //las coordenadas llegan como 0 y 1 asique multiplicamos por 2 
+
+		mouseYCord -= 1.f; //restamos a ambas -1 para obtener los limites -1, 1
+		mouseXCord -= 1.f;
+		mouseYCord = -mouseYCord;
+
+		vec4 result = vec4(mouseXCord, mouseYCord, -1, 1);
+
+		//1.2
+
+		result = inverse(projMat) * result; //pasar a espacio de cámara
+		result = homogeneous(result); //resultado uniforme
+
+		//1.3
+		result = inverse(viewMat) * result; //pasar a espacio de mundo
+
+		return result;
 
 	}
 
@@ -61,7 +80,7 @@ struct Exercise3 {
 	};
 
 	// as in http://viclw17.github.io/2018/07/16/raytracing-ray-sphere-intersection/
-	static bool raySphereIntersection(const Ray& ray, vec3 C, float r, float* intersection_distance) {
+	/*static bool raySphereIntersection(const Ray& ray, vec3 C, float r, float* intersection_distance) {
 
 		const vec3& A = ray.origin;
 		const vec3& B = ray.direction;
@@ -102,12 +121,56 @@ struct Exercise3 {
 			return true;
 		}
 		return false;
-	}
+	}*/
 
 	// as in https://www.scratchapixel.com/lessons/3d-basic-rendering/minimal-ray-tracer-rendering-simple-shapes/ray-sphere-intersection
-	//static bool raySphereIntersection(const Ray& ray, vec3 C, float r, float* intersection_distance) {
+	
+	bool solveQuadratic(const float& a, const float& b, const float& c, float& x0, float& x1)
+	{
+		float discr = b * b - 4 * a * c;
+		if (discr < 0) return false;
+		else if (discr == 0) x0 = x1 = -0.5 * b / a;
+		else {
+			float q = (b > 0) ?
+				-0.5 * (b + sqrt(discr)) :
+				-0.5 * (b - sqrt(discr));
+			x0 = q / a;
+			x1 = c / q;
+		}
+		if (x0 > x1) std::swap(x0, x1);
 
-	//}
+		return true;
+	}
+
+	//Elijo la solución geométrica del link y la adapto al método ya proporcionado:
+	static bool raySphereIntersection(const Ray& ray, vec3 C, float r, float* intersection_distance) {
+		float t0, t1, t; // solutions for t if the ray intersects 
+
+		const vec3& origin = ray.origin;
+		const vec3& direction = ray.direction;
+
+		
+		// geometric solution
+			vec3 L = C - origin;
+			float tca = dot(L,direction);
+			// if (tca < 0) return false;
+			float d2 = dot(L,L) - tca * tca;
+			if (d2 > r) return false;
+			float thc = sqrt(r - d2);
+			t0 = tca - thc;
+			t1 = tca + thc;
+
+			if (t0 > t1) std::swap(t0, t1);
+
+			if (t0 < 0) {
+				t0 = t1; // if t0 is negative, let's use t1 instead 
+				if (t0 < 0) return false; // both t0 and t1 are negative 
+			}
+
+			t = t0;
+
+			return true;
+	}
 
 	static void onKeyPressed(GLFWwindow* window, int key, int scancode, int action, int mods){
 

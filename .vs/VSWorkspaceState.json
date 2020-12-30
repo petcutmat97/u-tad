@@ -2,13 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\C++",
-    "\\Math",
-    "\\Math\\exercise1handout",
-    "\\Math\\exercise1handout\\exercise1handout",
-    "\\Math\\exercise1handout\\exercise1handout\\out",
-    "\\Math\\exercise1handout\\exercise1handout\\Release",
-    "\\Math\\exercise1handout\\exercise2handout"
+    "\\C++\\Practicas",
+    "\\C++\\Practicas\\Practicas",
+    "\\C++\\Practicas\\Practicas\\Practica5",
+    "\\C++\\Practicas\\Practicas\\Practica5\\Debug\\Practica5.tlog",
+    "\\C++\\Practicas\\Practicas\\Practica6",
+    "\\C++\\Practicas\\Practicas\\Practica6\\Debug",
+    "\\C++\\Practicas\\Practicas\\Practica7",
+    "\\C++\\Practicas\\Practicas\\Practica7\\Debug"
   ],
-  "SelectedNode": "\\Math",
+  "SelectedNode": "\\C++\\Practicas\\Practicas\\Practica7\\Practica7.cpp",
   "PreviewInSolutionExplorer": false
 }

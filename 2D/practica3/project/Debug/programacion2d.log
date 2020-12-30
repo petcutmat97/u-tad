@@ -1,0 +1,25 @@
+﻿  main.cpp
+C:\Users\peter\source\repos\u-tad\2D\practica2\src\main.cpp(90,18): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\peter\source\repos\u-tad\2D\practica2\src\main.cpp(202,75): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\peter\source\repos\u-tad\2D\practica2\src\main.cpp(202,55): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\peter\source\repos\u-tad\2D\practica2\src\main.cpp(202,43): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\peter\source\repos\u-tad\2D\practica2\src\main.cpp(202,32): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\peter\source\repos\u-tad\2D\practica2\src\main.cpp(206,46): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\peter\source\repos\u-tad\2D\practica2\src\main.cpp(206,35): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\peter\source\repos\u-tad\2D\practica2\src\main.cpp(210,81): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\peter\source\repos\u-tad\2D\practica2\src\main.cpp(210,61): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\peter\source\repos\u-tad\2D\practica2\src\main.cpp(210,47): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\peter\source\repos\u-tad\2D\practica2\src\main.cpp(210,34): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\peter\source\repos\u-tad\2D\practica2\src\main.cpp(214,82): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\peter\source\repos\u-tad\2D\practica2\src\main.cpp(214,70): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\peter\source\repos\u-tad\2D\practica2\src\main.cpp(214,47): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\peter\source\repos\u-tad\2D\practica2\src\main.cpp(214,36): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\peter\source\repos\u-tad\2D\practica2\src\main.cpp(218,70): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\peter\source\repos\u-tad\2D\practica2\src\main.cpp(218,28): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\peter\source\repos\u-tad\2D\practica2\src\main.cpp(219,70): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\peter\source\repos\u-tad\2D\practica2\src\main.cpp(219,28): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\peter\source\repos\u-tad\2D\practica2\src\main.cpp(220,77): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\peter\source\repos\u-tad\2D\practica2\src\main.cpp(220,43): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\peter\source\repos\u-tad\2D\practica2\src\main.cpp(221,54): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\peter\source\repos\u-tad\2D\practica2\src\main.cpp(221,28): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+  programacion2d.vcxproj -> C:\Users\peter\source\repos\u-tad\2D\practica2\project\Debug\programacion2d.exe

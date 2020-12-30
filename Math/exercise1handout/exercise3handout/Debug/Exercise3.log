@@ -1,4 +1,63 @@
-﻿  exercise3.cpp
+﻿  camera.cpp
+  exercise3.cpp
+C:\Users\peter\source\repos\u-tad\Math\exercise1handout\exercise3handout\exercise3.h(132,43): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\peter\source\repos\u-tad\Math\exercise1handout\exercise3handout\exercise3.h(134,12): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  gl_utils.cpp
+  lineshapes.cpp
   main.cpp
+C:\Users\peter\source\repos\u-tad\Math\exercise1handout\exercise3handout\exercise3.h(132,43): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\peter\source\repos\u-tad\Math\exercise1handout\exercise3handout\exercise3.h(134,12): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  maths_funcs.cpp
+  mesh.cpp
+C:\Users\peter\source\repos\u-tad\Math\exercise1handout\common\include\assimp\quaternion.inl(207,15): warning C4244: '=': conversion from 'double' to 'TReal', possible loss of data
+          with
+          [
+              TReal=float
+          ]
+C:\Users\peter\source\repos\u-tad\Math\exercise1handout\common\include\assimp\quaternion.inl(186): message : while compiling class template member function 'void aiQuaterniont<float>::Interpolate(aiQuaterniont<float> &,const aiQuaterniont<float> &,const aiQuaterniont<float> &,TReal)'
+          with
+          [
+              TReal=float
+          ]
+C:\Users\peter\source\repos\u-tad\Math\exercise1handout\common\include\assimp\anim.h(435): message : see reference to function template instantiation 'void aiQuaterniont<float>::Interpolate(aiQuaterniont<float> &,const aiQuaterniont<float> &,const aiQuaterniont<float> &,TReal)' being compiled
+          with
+          [
+              TReal=float
+          ]
+C:\Users\peter\source\repos\u-tad\Math\exercise1handout\common\include\assimp\anim.h(107): message : see reference to class template instantiation 'aiQuaterniont<float>' being compiled
+C:\Users\peter\source\repos\u-tad\Math\exercise1handout\common\include\assimp\quaternion.inl(208,14): warning C4244: '=': conversion from 'double' to 'TReal', possible loss of data
+          with
+          [
+              TReal=float
+          ]
+C:\Users\peter\source\repos\u-tad\Math\exercise1handout\common\include\assimp\quaternion.inl(209,61): warning C4244: '=': conversion from 'double' to 'TReal', possible loss of data
+          with
+          [
+              TReal=float
+          ]
+C:\Users\peter\source\repos\u-tad\Math\exercise1handout\common\include\assimp\quaternion.inl(210,33): warning C4244: '=': conversion from 'double' to 'TReal', possible loss of data
+          with
+          [
+              TReal=float
+          ]
+C:\Users\peter\source\repos\u-tad\Math\exercise1handout\common\include\assimp\vector3.inl(93,13): warning C4244: 'return': conversion from 'double' to 'TReal', possible loss of data
+          with
+          [
+              TReal=float
+          ]
+C:\Users\peter\source\repos\u-tad\Math\exercise1handout\common\include\assimp\vector3.inl(92): message : while compiling class template member function 'TReal aiVector3t<TReal>::Length(void) const'
+          with
+          [
+              TReal=float
+          ]
+C:\Users\peter\source\repos\u-tad\Math\exercise1handout\common\include\assimp\vector3.inl(98): message : see reference to function template instantiation 'TReal aiVector3t<TReal>::Length(void) const' being compiled
+          with
+          [
+              TReal=float
+          ]
+C:\Users\peter\source\repos\u-tad\Math\exercise1handout\common\include\assimp\vector3.inl(142): message : while compiling class template member function 'bool aiVector3t<float>::operator ==(const aiVector3t<float> &) const'
+C:\Users\peter\source\repos\u-tad\Math\exercise1handout\common\include\assimp\anim.h(82): message : see reference to function template instantiation 'bool aiVector3t<float>::operator ==(const aiVector3t<float> &) const' being compiled
+C:\Users\peter\source\repos\u-tad\Math\exercise1handout\common\include\assimp\types.h(150): message : see reference to class template instantiation 'aiVector3t<float>' being compiled
+  node.cpp
   Generating Code...
-  Exercise3.vcxproj -> C:\Users\chema\Documents\Developments\Companies\Utad\Math102\exercise3handout\Debug\Exercise3.exe
+  Exercise3.vcxproj -> C:\Users\peter\Source\Repos\u-tad\Math\exercise1handout\exercise3handout\Debug\Exercise3.exe

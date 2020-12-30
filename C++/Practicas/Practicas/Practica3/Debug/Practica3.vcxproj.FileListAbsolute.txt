@@ -1,0 +1,2 @@
+C:\Users\peter\Source\Repos\u-tad\C++\Practicas\Practicas\Practica3\Debug\Practica3.exe
+C:\Users\peter\Source\Repos\u-tad\C++\Practicas\Practicas\Practica3\Debug\Practica3.pdb

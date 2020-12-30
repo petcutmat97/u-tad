@@ -1,0 +1,4 @@
+C:\Users\danru\Desktop\U-Tad\Programación 2D\Repo\programacion2d\practica1\project\Debug\programacion2d.exe
+C:\Users\danru\Desktop\U-Tad\Programación 2D\Repo\programacion2d\practica1\project\Debug\programacion2d.pdb
+C:\Users\peter\source\repos\u-tad\2D\practica1\project\Debug\programacion2d.exe
+C:\Users\peter\source\repos\u-tad\2D\practica1\project\Debug\programacion2d.pdb
